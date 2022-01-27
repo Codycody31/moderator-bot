@@ -16,12 +16,4 @@ client.on("message", message => {
             break
         }
     }
-    for (var i = 0; i < summon.length; i++) {
-        if (content.includes(summon[i])){  
-            message.channel.send("<@" + message.author + "> you summoned me!")
-			.then(() => console.log(`The moderator Bot was summoned by ${message.author.username} from the channel ${message.channel.name}`))
-			.catch(console.error);
-            break
-        }
-    }
 })

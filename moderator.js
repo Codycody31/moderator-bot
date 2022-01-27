@@ -9,8 +9,9 @@ client.on("message", message => {
     for (var i = 0; i < noNoWords.length; i++) {
         if (content.includes(noNoWords[i])){  
             message.delete()
-			.then(() => console.log(`FSHS Bot removed the word ${message.content} by ${message.author.username} from the channel ${message.channel.name}`))
-			.catch(console.error);
+			.then(() => console.log(`The moderator Bot removed the word ${message.content} by ${message.author.username} from the channel ${message.channel.name}`))
+			.catch(console.error)
+			message.channel.send("Uh-ho! <@" + message.author + "> you said a no-no word!");
             break
         }
     }
